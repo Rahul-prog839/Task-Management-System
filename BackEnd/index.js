@@ -18,9 +18,10 @@ const TodoRoutes = require("./Routes/TodoRoutes");
 const NoteRoutes = require("./Routes/NoteRoutes");
 const TaskRoutes = require("./Routes/TaskRoutes");
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 const app = express();
+app.set("trust proxy", 1);
 
 app.use([
   cors({
@@ -45,6 +46,9 @@ app.use(
     store: sessionStore,
     cookie: {
       maxAge: 1000 * 60 * 60 * 24,
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
     },
   })
 );
