@@ -1,0 +1,98 @@
+
+.forgot-con {
+  opacity: 0.9;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--grey);
+  padding: 20px;
+  border-radius: 20px;
+  width: 300px;
+  justify-content: center;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15),
+    0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15),
+    0 8px 8px rgba(0, 0, 0, 0.15);
+}
+
+.forgot-con h3 {
+  text-align: center;
+  text-transform: capitalize;
+  pointer-events: none;
+}
+
+.forgot-con label {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.forgot-con input {
+  border: 0;
+  margin: 0;
+  outline: 0;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15),
+    0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15),
+    0 8px 8px rgba(0, 0, 0, 0.15);
+  height: 40px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.forgot-con button {
+  height: 40px;
+  text-transform: uppercase;
+  background-color: var(--nav);
+  border: 0;
+  margin: 0;
+  outline: 0;
+  border-radius: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.forgot-con button:hover:not(:disabled) {
+  border-radius: 5px;
+  font-weight: 500;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15),
+    0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15),
+    0 8px 8px rgba(0, 0, 0, 0.15);
+}
+
+.forgot-con button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.email-success {
+  text-align: center;
+  padding: 20px;
+}
+
+.email-success h2 {
+  margin-bottom: 15px;
+  text-transform: none;
+}
+
+.email-success p {
+  margin: 12px 0;
+}
+
+.email-success strong {
+  display: block;
+  overflow-wrap: anywhere;
+  margin: 10px 0;
+}
+
+@media (max-width: 480px) {
+  .forgot-con {
+    width: 85%;
+    max-width: 300px;
+    box-sizing: border-box;
+  }
+}
